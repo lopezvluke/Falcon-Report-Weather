@@ -53,7 +53,7 @@ function refresh() {
         case "rain":
             ctx.drawImage(rainIcon, 120, 375, 350, 350);
             break;
-        case "Snow":
+        case "snow":
             ctx.drawImage(snowIcon, 120, 375, 350, 350);
             break;
         case "partlycloudy":
@@ -74,7 +74,7 @@ function refresh() {
         case "rain":
             ctx.drawImage(rainIcon, 800, 375, 350, 350);
             break;
-        case "Snow":
+        case "snow":
             ctx.drawImage(snowIcon, 800, 375, 350, 350);
             break;
         case "partlycloudy":
@@ -95,7 +95,7 @@ function refresh() {
         case "rain":
             ctx.drawImage(rainIcon, 1420, 375, 350, 350);
             break;
-        case "Snow":
+        case "snow":
             ctx.drawImage(snowIcon, 1420, 375, 350, 350);
             break;
         case "partlycloudy":
