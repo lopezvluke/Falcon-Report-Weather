@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcont Report Weather</title>
+</head>
+
+<body>
+    <canvas id="graphic"></canvas>
+    <label for="reporter-name">Reporter's name:</label>
+    <input type="text" id="reporter-name">
+    <div class="day-horizontal">
+        <div class="day-info">
+            <h2>Friday</h2>
+            <label for="friday-temp">Temperature:</label>
+            <input type="number" id="friday-temp" value="60">
+            <label for="friday-conditions">Conditions:</label>
+            <select id="friday-conditions">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="thunder">Thunder</option>
+                <option value="rain">Rain</option>
+                <option value="snow">Snow</option>
+                <option value="partlycloudy">Partly Cloudy</option>
+            </select>
+        </div>
+        <div class="day-info">
+            <h2>Saturday</h2>
+            <label for="saturday-temp">Temperature:</label>
+            <input type="number" id="saturday-temp" value="60">
+            <label for="saturday-conditions">Conditions:</label>
+            <select id="saturday-conditions">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="thunder">Thunder</option>
+                <option value="rain">Rain</option>
+                <option value="snow">Snow</option>
+                <option value="snow">Partly Cloudy</option>
+            </select>
+        </div>
+        <div class="day-info">
+            <h2>Sunday</h2>
+            <label for="Sunday-temp">Temperature:</label>
+            <input type="number" id="sunday-temp" value="60">
+            <label for="sunday-conditions">Conditions:</label>
+            <select id="sunday-conditions">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="thunder">Thunder</option>
+                <option value="rain">Rain</option>
+                <option value="snow">Snow</option>
+                <option value="snow">Partly Cloudy</option>
+            </select>
+        </div>
+    </div>
+    <button id="refresh">refresh</button>
+    <div class="download">
+        <button id="download">download</button>
+    </div>
+    <script src="main.js" async defer></script>
+</body>
+
+</html>
