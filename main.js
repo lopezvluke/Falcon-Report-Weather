@@ -22,7 +22,7 @@ const rainIcon = new Image();
 rainIcon.src = "images/rain.png";
 
 const snowIcon = new Image();
-snowIcon.src = "images/snow.png";
+snowIcon.src = "images/Snow.png";
 
 const partlycloudyIcon = new Image();
 partlycloudyIcon.src = "images/partly-cloudy.png";
