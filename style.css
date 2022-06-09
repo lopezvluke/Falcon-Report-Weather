@@ -2,105 +2,93 @@ html,
 body {
     position: relative;
     height: 100%;
-      
+
+}
+
+* {
+    font: inherit;
 }
 
 html {
-      
     -webkit-text-size-adjust: 100%;
     -webkit-ser-select: none;
     user-select: none;
+    font: 500 16px "Cabin", sans-serif;
 }
 
 body {
-    display: flex;
-    overflow: hidden;
-    overflow-y: auto;
     margin: 0;
-    padding: 10px;
-    flex-direction: column;
-    background-color: lightblue;
-    gap: 10px;
-    font-family: gogh; 
-      
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-body * {
-    flex: 0 0 auto;
-    font-family: gogh; 
-      
+.graphic-container {
+    position: relative;
+    width: min(80vw, 800px);
+    height: fit-content;
+}
+
+#hover-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 0.25em;
+}
+
+#hover-overlay:hover {
+    backdrop-filter: blur(5px) brightness(0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px dashed rgba(0, 0, 0, 0.7);
+}
+
+#hover-overlay:hover::before {
+    content: "Download";
+    color: rgba(0, 0, 0, 0.7);
+    font: 700 50px "Cabin", sans-serif;
+
 }
 
 canvas {
-    border: 1px solid black;
-    width: 80vw;
-      
-}
-
-h1 {
-      
-    font-size: 12px;    
+    border: none;
+    border-radius: 0.25em;
+    width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
     margin: 0;
-    font-family: gogh; 
-}
-
-button {
-    height: 2em;
-    padding: 0 0.75em;
-    border: none;
-    border-radius: 0.5em;
-    font: 16px Arial, sans-serif;
-    background-color: white;
-    transition: 100ms ease-in-out;
-    font-family: gogh; 
-      
-}
-
-button:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-}
-
-button:active {
-    transform: scale(0.9);
+    font-size: 20px;
+    font-weight: 700;
 }
 
 input,
 select {
-    height: 1.5em;
+    height: 2em;
     padding: 0 0.5em;
     border: none;
     border-radius: 0.25em;
+    background-color: gainsboro;
 }
 
-.day-horizontal {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    overflow-x: auto;
-}
-
-.day-info {
+.options {
+    width: min(80vw, 800px);
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
+    gap: 5px;
 }
 
-.day-info>label {
-    margin: 5px 0;
-    
+.options>div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
 }
 
-@font-face {
-    src: url(fonts/Gogh-ExtraBold.otf);
-    font-weight: bold;
-    font-family: gogh; 
+.options>div>label {
+    line-height: 2em;
 }
 
-
-
-
+.options>div>:first-child {
+    grid-column: 1 / 3;
+}

@@ -2,10 +2,14 @@ const image = document.getElementById("graphic");
 const ctx = image.getContext("2d");
 const w = 1920;
 const h = 1080;
-const backgroundImage = new Image();
-backgroundImage.src = "images/weather.png";
 image.setAttribute("width", w);
 image.setAttribute("height", h);
+
+const backgroundImageThree = new Image();
+backgroundImageThree.src = "images/weather_three.png";
+
+const backgroundImageFour = new Image();
+backgroundImageFour.src = "images/weather_four.png";
 
 const reporterName = document.getElementById("reporter-name");
 
@@ -34,12 +38,16 @@ primaryFont.load().then(font => {
     refresh();
 });
 
-backgroundImage.onload = refresh;
+backgroundImageThree.onload = refresh;
 
 function refresh() {
-    ctx.drawImage(backgroundImage, 0, 0, w, h);
 
+    switch (document.getElementById("which-days").value) {
+        case "friday-sunday":
+            // Draw background image for three days
+            ctx.drawImage(backgroundImageThree, 0, 0, w, h);
 
+<<<<<<< Updated upstream
     switch (document.getElementById("friday-conditions").value) {
         case "sunny":
             ctx.drawImage(sunnyIcon, 120, 375, 350, 350);
@@ -81,14 +89,72 @@ function refresh() {
             ctx.drawImage(partlycloudyIcon, 800, 375, 350, 350);
             break;
     }
+=======
+            switch (document.getElementById("friday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, 167, 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, 167, 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, 167, 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, 167, 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, 167, 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, 167, 375, 350, 350);
+                    break;
+            }
 
-    switch (document.getElementById("sunday-conditions").value) {
-        case "sunny":
-            ctx.drawImage(sunnyIcon, 1420, 375, 350, 350);
+            switch (document.getElementById("saturday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+            }
+>>>>>>> Stashed changes
+
+            switch (document.getElementById("sunday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+            }
             break;
-        case "cloudy":
-            ctx.drawImage(cloudyIcon, 1420, 375, 350, 350);
-            break;
+<<<<<<< Updated upstream
         case "thunder":
             ctx.drawImage(thunderIcon, 1420, 375, 350, 350);
             break;
@@ -97,11 +163,151 @@ function refresh() {
             break;
         case "snow":
             ctx.drawImage(snowIcon, 1420, 375, 350, 350);
+=======
+        case "friday-monday":
+            // Draw background image for four days
+            ctx.drawImage(backgroundImageFour, 0, 0, w, h);
+
+            switch (document.getElementById("friday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, 167, 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, 167, 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, 167, 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, 167, 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, 167, 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, 167, 375, 350, 350);
+                    break;
+            }
+
+            switch (document.getElementById("saturday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+            }
+
+            switch (document.getElementById("sunday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+            }
+>>>>>>> Stashed changes
             break;
-        case "partlycloudy":
-            ctx.drawImage(partlycloudyIcon, 1420, 375, 350, 350);
+
+        case "thursday-sunday":
+            // Draw background image for Four days
+            ctx.drawImage(backgroundImageFour, 0, 0, w, h);
+
+            switch (document.getElementById("friday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, 167, 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, 167, 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, 167, 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, 167, 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, 167, 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, 167, 375, 350, 350);
+                    break;
+            }
+
+            switch (document.getElementById("saturday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, (w / 2) - (350 / 2), 375, 350, 350);
+                    break;
+            }
+
+            switch (document.getElementById("sunday-conditions").value) {
+                case "sunny":
+                    ctx.drawImage(sunnyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "cloudy":
+                    ctx.drawImage(cloudyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "thunder":
+                    ctx.drawImage(thunderIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "rain":
+                    ctx.drawImage(rainIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "Snow":
+                    ctx.drawImage(snowIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+                case "partlycloudy":
+                    ctx.drawImage(partlycloudyIcon, 1550 - (350 / 2), 375, 350, 350);
+                    break;
+            }
             break;
     }
+
+
+
+
+
+
+
 
 
     ctx.textAlign = "center";
@@ -109,18 +315,18 @@ function refresh() {
     ctx.font = "100px Gogh";
     floating3DText(ctx, reporterName.value + "'s weekend outlook", w / 2, 90, 10);
 
-    floating3DText(ctx, "Friday", 290, 300, 10);
-    floating3DText(ctx, "Saturday", 975, 300, 10);
-    floating3DText(ctx, "Sunday", 1612, 300, 10);
+    floating3DText(ctx, "Friday", 340, 300, 10);
+    floating3DText(ctx, "Saturday", (w / 2), 300, 10);
+    floating3DText(ctx, "Sunday", 1550, 300, 10);
 
     let fridayTemp = document.getElementById("friday-temp").value;
-    floating3DText(ctx, fridayTemp + "°", 290, 900, 10);
+    floating3DText(ctx, fridayTemp + "°", 360, 900, 10);
 
     let saturdayTemp = document.getElementById("saturday-temp").value;
-    floating3DText(ctx, saturdayTemp + "°", 975, 900, 10);
+    floating3DText(ctx, saturdayTemp + "°", (w / 2), 900, 10);
 
     let sundayTemp = document.getElementById("sunday-temp").value;
-    floating3DText(ctx, sundayTemp + "°", 1612, 900, 10);
+    floating3DText(ctx, sundayTemp + "°", 1550, 900, 10);
 
 
 
@@ -144,13 +350,17 @@ function floating3DText(ctx, string, x, y, depth) {
     ctx.fillText(string, x, y);
 }
 
-document.getElementById("refresh").addEventListener("click", refresh);
+// hello mr lipsky :) -kenny
+document.querySelectorAll("input, select").forEach(input => {
+    input.addEventListener("input", refresh);
+})
 
-document.getElementById("download").addEventListener("click", downloadImage);
+document.getElementById("hover-overlay").addEventListener("click", downloadImage);
 
 function downloadImage() {
+    console.log("downloaded");
     var link = document.createElement("a");
-    link.download = "weather.png";
+    link.download = "weather_three.png";
     link.href = image.toDataURL();
     link.click();
 }

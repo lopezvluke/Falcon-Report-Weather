@@ -7,14 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Falcon Report Weather</title>
+<<<<<<< Updated upstream
+=======
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+>>>>>>> Stashed changes
 </head>
 
 <body>
-    <canvas id="graphic"></canvas>
-    <label for="reporter-name">Reporter's name:</label>
-    <input type="text" id="reporter-name">
-    <div class="day-horizontal">
-        <div class="day-info">
+    <div class="graphic-container">
+        <div id="hover-overlay"></div>
+        <canvas id="graphic"></canvas>
+    </div>
+
+    <div class="options">
+        <h2>Reporter's name:</h2>
+        <input type="text" id="reporter-name">
+        <h2>Which days?</h2>
+        <select id="which-days">
+            <option value="friday-sunday">Friday to Sunday</option>
+            <option value="friday-monday">Friday to Monday</option>
+            <option value="thursday-sunday">Thursday to Sunday</option>
+        </select>
+        <div id="thursday-box">
+            <h2>Thursday</h2>
+            <label for="thursday-temp">Temperature:</label>
+            <input type="number" id="thursday-temp" value="60">
+            <label for="thursday-conditions">Conditions:</label>
+            <select id="thursday-conditions">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="thunder">Thunder</option>
+                <option value="rain">Rain</option>
+                <option value="snow">Snow</option>
+                <option value="partlycloudy">Partly Cloudy</option>
+            </select>
+        </div>
+        <div>
             <h2>Friday</h2>
             <label for="friday-temp">Temperature:</label>
             <input type="number" id="friday-temp" value="60">
@@ -28,7 +60,7 @@
                 <option value="partlycloudy">Partly Cloudy</option>
             </select>
         </div>
-        <div class="day-info">
+        <div>
             <h2>Saturday</h2>
             <label for="saturday-temp">Temperature:</label>
             <input type="number" id="saturday-temp" value="60">
@@ -42,9 +74,9 @@
                 <option value="partlycloudy">Partly Cloudy</option>
             </select>
         </div>
-        <div class="day-info">
+        <div>
             <h2>Sunday</h2>
-            <label for="Sunday-temp">Temperature:</label>
+            <label for="sunday-temp">Temperature:</label>
             <input type="number" id="sunday-temp" value="60">
             <label for="sunday-conditions">Conditions:</label>
             <select id="sunday-conditions">
@@ -56,10 +88,20 @@
                 <option value="partlycloudy">Partly Cloudy</option>
             </select>
         </div>
-    </div>
-    <button id="refresh">refresh</button>
-    <div class="download">
-        <button id="download">download</button>
+        <div id="monday-box">
+            <h2>Monday</h2>
+            <label for="monday-temp">Temperature:</label>
+            <input type="number" id="monday-temp" value="60">
+            <label for="monday-conditions">Conditions:</label>
+            <select id="monday-conditions">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="thunder">Thunder</option>
+                <option value="rain">Rain</option>
+                <option value="snow">Snow</option>
+                <option value="partlycloudy">Partly Cloudy</option>
+            </select>
+        </div>
     </div>
     <script src="main.js" async defer></script>
 </body>
