@@ -44,7 +44,6 @@ body {
     content: "Download";
     color: rgba(0, 0, 0, 0.7);
     font: 700 70px "Cabin", sans-serif;
-
 }
 
 canvas {
@@ -75,6 +74,14 @@ select {
     border: none;
     border-radius: 0.25em;
     background-color: rgba(255, 255, 255, 0.25);
+    transition: 200ms ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
 }
 
 a {
@@ -110,5 +117,5 @@ a {
 }
 
 #footer {
-   margin: 0;
+    margin: 0;
 }
