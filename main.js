@@ -14,34 +14,29 @@ backgroundImageThree.src = "images/weather_three.png";
 const backgroundImageFour = new Image();
 backgroundImageFour.src = "images/weather_four.png";
 
+var icon = new Image();
 const icons = {
     "sunny": () => {
-        let icon = new Image();
         icon.src = "images/sunny.png";
         return icon;
     },
     "cloudy": () => {
-        let icon = new Image();
         icon.src = "images/cloudy.png";
         return icon;
     },
     "thunder": () => {
-        let icon = new Image();
         icon.src = "images/thunder.png";
         return icon;
     },
     "rain": () => {
-        let icon = new Image();
         icon.src = "images/rain.png";
         return icon;
     },
     "snow": () => {
-        let icon = new Image();
         icon.src = "images/snow.png";
         return icon;
     },
     "partlycloudy": () => {
-        let icon = new Image();
         icon.src = "images/partly_cloudy.png";
         return icon;
     }
