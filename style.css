@@ -31,7 +31,6 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 0.25rem;
-    transition: 200ms ease;
     color: rgba(0, 0, 0, 0.7);
     font: 700 70px "Cabin", sans-serif;
     backdrop-filter: blur(2px) brightness(0.8);
