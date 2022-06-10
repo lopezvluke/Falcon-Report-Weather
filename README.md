@@ -1,5 +1,3 @@
-# Falcon-Report-Weather
+# Falcon Report Weather Graphic Generator
 
-Generates weather graphics for The Falcon Report
-
-Weather icons by Kenny Hui @khui
+Generate weather graphics for The Falcon Report
