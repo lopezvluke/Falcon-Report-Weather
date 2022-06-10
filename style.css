@@ -23,16 +23,17 @@ body {
 .graphic-container {
     position: relative;
     width: min(80vw, 800px);
-    height: fit-content;
+    height: min(45vw, 450px);
 }
 
 #hover-overlay {
+    opacity: 0;
     position: absolute;
     inset: 0;
-    border-radius: 0.25em;
-}
-
-#hover-overlay:hover {
+    border-radius: 0.25rem;
+    transition: 200ms ease;
+    color: rgba(0, 0, 0, 0.7);
+    font: 700 70px "Cabin", sans-serif;
     backdrop-filter: blur(2px) brightness(0.8);
     display: flex;
     justify-content: center;
@@ -40,10 +41,8 @@ body {
     border: 10px dashed rgba(0, 0, 0, 0.7);
 }
 
-#hover-overlay:hover::before {
-    content: "Download";
-    color: rgba(0, 0, 0, 0.7);
-    font: 700 70px "Cabin", sans-serif;
+#hover-overlay:hover {
+    opacity: 1;
 }
 
 canvas {
