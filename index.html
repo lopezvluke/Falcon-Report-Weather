@@ -6,25 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falcon Report Weather</title>
-<<<<<<< Updated upstream
-=======
+    <title>Falcon Report Weather Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
->>>>>>> Stashed changes
 </head>
 
 <body>
     <div class="graphic-container">
         <div id="hover-overlay"></div>
         <canvas id="graphic"></canvas>
+        <img src="https://media.discordapp.net/attachments/789286098349457418/984590759107911790/click_me.png"
+            id="click-me">
     </div>
-
     <div class="options">
-        <h2>Reporter's name:</h2>
+        <h2>Who's reporting?</h2>
         <input type="text" id="reporter-name">
         <h2>Which days?</h2>
         <select id="which-days">
@@ -32,6 +30,7 @@
             <option value="friday-monday">Friday to Monday</option>
             <option value="thursday-sunday">Thursday to Sunday</option>
         </select>
+        <hr>
         <div id="thursday-box">
             <h2>Thursday</h2>
             <label for="thursday-temp">Temperature:</label>
@@ -103,6 +102,7 @@
             </select>
         </div>
     </div>
+    <p id="footer">Made by Luke Lopez with help from Kenny Hui • <a href="https://github.com/lopezvluke/Falcon-Report-Weather" target="_blank">GitHub</a> • <a href="https://www.youtube.com/c/TheFalconReport" target="_blank">The Falcon Report</a></p>
     <script src="main.js" async defer></script>
 </body>
 

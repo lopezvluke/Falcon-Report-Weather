@@ -1,8 +1,7 @@
-html,
-body {
-    position: relative;
-    height: 100%;
-
+:root {
+    --text-color: #000000;
+    --background-color: #e9f0f3;
+    --surface-color: #dfe6eb;
 }
 
 * {
@@ -17,9 +16,14 @@ html {
 }
 
 body {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    background-color: var(--background-color);
 }
 
 .graphic-container {
@@ -35,7 +39,7 @@ body {
 }
 
 #hover-overlay:hover {
-    backdrop-filter: blur(5px) brightness(0.8);
+    backdrop-filter: blur(2px) brightness(0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +49,7 @@ body {
 #hover-overlay:hover::before {
     content: "Download";
     color: rgba(0, 0, 0, 0.7);
-    font: 700 50px "Cabin", sans-serif;
+    font: 700 70px "Cabin", sans-serif;
 
 }
 
@@ -54,6 +58,14 @@ canvas {
     border-radius: 0.25em;
     width: 100%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+#click-me {
+    pointer-events: none;
+    position: absolute;
+    width: min(25%, 200px);
+    right: -15%;
+    bottom: 0;
 }
 
 h2 {
@@ -68,7 +80,11 @@ select {
     padding: 0 0.5em;
     border: none;
     border-radius: 0.25em;
-    background-color: gainsboro;
+    background-color: var(--surface-color);
+}
+
+a {
+    color: rgb(202, 23, 23);
 }
 
 .options {
@@ -91,4 +107,14 @@ select {
 
 .options>div>:first-child {
     grid-column: 1 / 3;
+}
+
+.options>hr {
+    width: 100%;
+    border: 2px solid var(--surface-color);
+    border-radius: 2px;
+}
+
+#footer {
+   margin: 0;
 }
