@@ -345,7 +345,7 @@ function refresh() {
             }
             break;
     }
-    floating3DText(ctx, reporterName.value + "'s weekend outlook", w / 2, 90, 10);
+    floating3DText(ctx, reporterName.value + "'s weekend outlook", w / 2, 120, 10);
 }
 
 function floating3DText(ctx, string, x, y, depth) {
