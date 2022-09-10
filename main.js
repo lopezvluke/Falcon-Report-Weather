@@ -65,7 +65,7 @@ function refresh() {
     let mondayTemp = document.getElementById("monday-temp").value;
 
     // Clear canvas
-    ctx.fillStyle =  "transparent";
+    ctx.fillStyle = "transparent";
     ctx.fillRect(0, 0, w, h);
 
     // Set text formatting
@@ -154,16 +154,16 @@ function refresh() {
 
     // If reporter name is blank
     if (!reporterName.value?.trim()) {
-        floating3DText(ctx, "This weekend outlook", w / 2, 120, 10);
+        floating3DText(ctx, "Today's Weekend Outlook", w / 2, 120, 10);
     }
     else {
         let name = reporterName.value?.trim()
         // Grammar
         if (reporterName.value.slice(-1) == "s") {
-            floating3DText(ctx, name + "' weekend outlook", w / 2, 120, 10);
+            floating3DText(ctx, name + "' Weekend Outlook", w / 2, 120, 10);
         }
         else {
-            floating3DText(ctx, name + "'s weekend outlook", w / 2, 120, 10);
+            floating3DText(ctx, name + "'s Weekend Outlook", w / 2, 120, 10);
         }
     }
 }
@@ -186,7 +186,6 @@ function floating3DText(ctx, string, x, y, depth) {
     ctx.fillText(string, x, y);
 }
 
-// hello mr lipsky :) -kenny
 document.querySelectorAll("input, select").forEach(input => {
     input.addEventListener("input", refresh);
 })
@@ -194,15 +193,9 @@ document.querySelectorAll("input, select").forEach(input => {
 document.getElementById("hover-overlay").addEventListener("click", downloadImage);
 
 function downloadImage() {
-    console.log("downloaded");
-    var link = document.createElement("a");
-    if (reporterName.value?.trim()) {
-        let name = reporterName.value?.trim().toLowerCase();
-        link.download = `${name}-weather-graphic`;
-    }
-    else {
-        link.download = "weather-graphic";
-    }
+    let link = document.createElement("a");
+    let name = reporterName.value?.trim() && reporterName.value?.trim().toLowerCase() + "-";
+    link.download = `${name}weather-graphic`;
     link.href = image.toDataURL();
     link.click();
 }
