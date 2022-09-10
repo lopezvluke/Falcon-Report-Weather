@@ -98,8 +98,9 @@ function refresh() {
             floating3DText(ctx, "Sunday", 1550, 300, 10);
 
             // Draw temperature text
+            ctx.font = "150px Gogh";
             floating3DText(ctx, fridayTemp + "°", 360, 900, 10);
-            floating3DText(ctx, saturdayTemp + "°", 950, 900, 10);
+            floating3DText(ctx, saturdayTemp + "°", 960, 900, 10);
             floating3DText(ctx, sundayTemp + "°", 1560, 900, 10);
 
             // Draw icons
@@ -118,21 +119,22 @@ function refresh() {
 
             // Draw day of the week
             floating3DText(ctx, "Fri", 265, 300, 10);
-            floating3DText(ctx, "Sat", 730, 300, 10);
+            floating3DText(ctx, "Sat", 720, 300, 10);
             floating3DText(ctx, "Sun", 1190, 300, 10);
             floating3DText(ctx, "Mon", 1650, 300, 10);
 
             // Draw temperature text
+            ctx.font = "150px Gogh";
             floating3DText(ctx, fridayTemp + "°", 265, 900, 10);
             floating3DText(ctx, saturdayTemp + "°", 730, 900, 10);
-            floating3DText(ctx, sundayTemp + "°", 1190, 900, 10);
-            floating3DText(ctx, mondayTemp + "°", 1650, 900, 10);
+            floating3DText(ctx, sundayTemp + "°", 1195, 900, 10);
+            floating3DText(ctx, mondayTemp + "°", 1665, 900, 10);
 
             // Draw icons
             ctx.drawImage(icons[document.getElementById("friday-conditions").value](), 95, 375, 350, 350);
             ctx.drawImage(icons[document.getElementById("saturday-conditions").value](), 560, 375, 350, 350);
-            ctx.drawImage(icons[document.getElementById("sunday-conditions").value](), 1025, 375, 350, 350);
-            ctx.drawImage(icons[document.getElementById("monday-conditions").value](), 1485, 375, 350, 350);
+            ctx.drawImage(icons[document.getElementById("sunday-conditions").value](), 1030, 375, 350, 350);
+            ctx.drawImage(icons[document.getElementById("monday-conditions").value](), 1490, 375, 350, 350);
             break;
         case "thursday-sunday":
             // Hide/show relevant options
@@ -144,23 +146,26 @@ function refresh() {
 
             // Draw day of the week
             floating3DText(ctx, "Thu", 265, 300, 10);
-            floating3DText(ctx, "Fri", 730, 300, 10);
+            floating3DText(ctx, "Fri", 720, 300, 10);
             floating3DText(ctx, "Sat", 1190, 300, 10);
             floating3DText(ctx, "Sun", 1650, 300, 10);
 
             // Draw temperature text
+            ctx.font = "150px Gogh";
             floating3DText(ctx, thursdayTemp + "°", 265, 900, 10);
             floating3DText(ctx, fridayTemp + "°", 730, 900, 10);
-            floating3DText(ctx, saturdayTemp + "°", 1190, 900, 10);
-            floating3DText(ctx, sundayTemp + "°", 1650, 900, 10);
+            floating3DText(ctx, saturdayTemp + "°", 1195, 900, 10);
+            floating3DText(ctx, sundayTemp + "°", 1665, 900, 10);
 
             // Draw icons
             ctx.drawImage(icons[document.getElementById("thursday-conditions").value](), 95, 375, 350, 350);
             ctx.drawImage(icons[document.getElementById("friday-conditions").value](), 560, 375, 350, 350);
-            ctx.drawImage(icons[document.getElementById("saturday-conditions").value](), 1025, 375, 350, 350);
-            ctx.drawImage(icons[document.getElementById("sunday-conditions").value](), 1485, 375, 350, 350);
+            ctx.drawImage(icons[document.getElementById("saturday-conditions").value](), 1030, 375, 350, 350);
+            ctx.drawImage(icons[document.getElementById("sunday-conditions").value](), 1490, 375, 350, 350);
             break;
     }
+    
+    ctx.font = "100px Gogh";
 
     // If reporter name is blank
     if (!reporterName.value?.trim()) {
