@@ -14,31 +14,43 @@ backgroundImageThree.src = "images/weather_three.png";
 const backgroundImageFour = new Image();
 backgroundImageFour.src = "images/weather_four.png";
 
+const sunny = new Image();
+sunny.src = "images/sunny.png";
+
+const cloudy = new Image();
+cloudy.src = "images/cloudy.png";
+
+const thunder = new Image();
+thunder.src = "images/thunder.png";
+
+const rain = new Image();
+rain.src = "images/rain.png";
+
+const snow = new Image();
+snow.src = "images/snow.png";
+
+const partlycloudy = new Image();
+partlycloudy.src = "images/partly_cloudy.png";
+
 var icon = new Image();
 const icons = {
     "sunny": () => {
-        icon.src = "images/sunny.png";
-        return icon;
+        return sunny;
     },
     "cloudy": () => {
-        icon.src = "images/cloudy.png";
-        return icon;
+        return cloudy;
     },
     "thunder": () => {
-        icon.src = "images/thunder.png";
-        return icon;
+        return thunder;
     },
     "rain": () => {
-        icon.src = "images/rain.png";
-        return icon;
+        return rain;
     },
     "snow": () => {
-        icon.src = "images/snow.png";
-        return icon;
+        return snow;
     },
     "partlycloudy": () => {
-        icon.src = "images/partly_cloudy.png";
-        return icon;
+        return partlycloudy;
     }
 }
 
@@ -50,8 +62,6 @@ primaryFont.load().then(font => {
     document.fonts.add(font);
     refresh();
 });
-
-refresh();
 
 // Redraw canvas
 function refresh() {
